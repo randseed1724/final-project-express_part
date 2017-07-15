@@ -75,7 +75,13 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(cors());
+// If you are in production do this
+// app.use(cors());
+// If you are in dev do this
+app.use(cors({
+  credentials: true,
+  origin: ["http://localhost:4200"]
+}));
 
 //ROUTES  <<<< -------------------------------------------------
 //^^^^^^  -------------------------------------------------
