@@ -35,11 +35,12 @@ router.post('/api/quote', ensureLoggedInApiVersion, (req, res, next) => {
         res.status(200).json(thisQuotes);
      });
    });// close "exec()"" callback
-});
-
-router.get('/api/quote', ensureLoggedInApiVersion, (req, res, next) => {
-   QuotesModel
-   .find({userCreator: req.user.userCreator })
+});> {
+        if (err) {
+          res.status(500).json({message: 'Find list went wrong at final step - randseed1724'});
+          return;
+        }
+        res.status(200).json(.userCreator })
    .populate("userCreator")
    .exec((err, allTheList) => {
      if (err) {
