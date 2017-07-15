@@ -1,0 +1,228 @@
+<div class="container">
+
+  <h4 style="padding-top: 2em">Welcome Caesar <%=user.name%></h4>
+
+    <div class="row user-menu-container square">
+        <div class="col-md-7 user-details">
+            <div class="row coralbg white">
+                <div class="col-md-6 no-pad">
+                    <div class="user-pad">
+                        <h4 class="white">Welcome back!</h4>
+                        <h4 class="white"><i class="fa fa-check-circle-o"></i>Miami, FL</h4>
+                        <button type="button" class="btn btn-labeled btn-info" href="#">
+                            <span class="btn-label"><i class="fa fa-pencil"></i></span>Edit Account</button>
+                    </div>
+                </div>
+                <div class="col-md-6 no-pad">
+                    <div class="user-image">
+                        <img src="http://graph.facebook.com/<%=user.facebookID%>/picture?type=large" class="img-responsive thumbnail">
+                    </div>
+                </div>
+            </div>
+            <div class="row overview">
+                <div class="col-md-4 user-pad text-center">
+                    <h5>AWARDS</h5>
+                    <h5>$27,084</h5>
+                </div>
+                <div class="col-md-4 user-pad text-center">
+                    <h5>CONTESTS</h5>
+                    <h5>12</h5>
+                </div>
+                <div class="col-md-4 user-pad text-center">
+                    <h5>VOTES</h5>
+                    <h5>13,901</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 user-menu-btns">
+            <div class="btn-group-vertical square" id="responsive">
+                <a href="#" class="btn btn-block btn-default active">
+                  <i class="fa fa-bell-o fa-3x"></i>
+                </a>
+                <a href="#" class="btn btn-default">
+                  <i class="fa fa-envelope-o fa-3x"></i>
+                </a>
+                <a href="#" class="btn btn-default">
+                  <i class="fa fa-laptop fa-3x"></i>
+                </a>
+                <a href="#" class="btn btn-default">
+                  <i class="fa fa-cloud-upload fa-3x"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 user-menu user-pad">
+            <div class="user-menu-content active">
+                <h5>
+                    Active Contests
+                </h5>
+                <ul class="user-menu-list">
+                    <li>
+                        <h6><i class="fa fa-user coral"></i>Contest WORTH 2017</h4>
+                    </li>
+                    <li>
+                        <h6><i class="fa fa-heart-o coral"></i>Most Wanted Picture</h4>
+                    </li>
+                    <li>
+                        <h6><i class="fa fa-paper-plane-o coral"></i> Flying Around the World</h4>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-labeled btn-success" href="#">
+                            <span class="btn-label"><i class="fa fa-bell-o"></i></span>View all activity</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="user-menu-content">
+                <h5>
+                    Your Inbox
+                </h5>
+                <ul class="user-menu-list">
+                    <li>
+                        <h6>From Roselyn Smith <small class="coral"><strong>NEW</strong> <i class="fa fa-clock-o"></i> 7:42 A.M.</small></h6>
+                    </li>
+                    <li>
+                        <h6>From Jonathan Hawkins <small class="coral"><i class="fa fa-clock-o"></i> 10:42 A.M.</small></h6>
+                    </li>
+                    <li>
+                        <h6>From Georgia Jennings <small class="coral"><i class="fa fa-clock-o"></i> 10:42 A.M.</small></h6>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-labeled btn-danger" href="#">
+                            <span class="btn-label"><i class="fa fa-envelope-o"></i></span>View All Messages</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="user-menu-content">
+                <h5>
+                    Hot Contests
+                </h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="view">
+                            <div class="caption">
+                                <p>47LabsDesign</p>
+                                <a href="" rel="tooltip" title="Appreciate"><span class="fa fa-heart-o fa-2x"></span></a>
+                                <a href="" rel="tooltip" title="View"><span class="fa fa-search fa-2x"></span></a>
+                            </div>
+                            <img src="http://24.media.tumblr.com/273167b30c7af4437dcf14ed894b0768/tumblr_n5waxesawa1st5lhmo1_1280.jpg" class="img-responsive">
+                        </div>
+                        <div class="info">
+                            <p class="small" style="text-overflow: ellipsis">An Awesome Title</p>
+                            <p class="small coral text-right"><i class="fa fa-clock-o"></i> Posted Today | 10:42 A.M.</small>
+                        </div>
+                        <div class="stats turqbg">
+                            <span class="fa fa-heart-o"> <strong>47</strong></span>
+                            <span class="fa fa-eye pull-right"> <strong>137</strong></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="view">
+                            <div class="caption">
+                                <p>47LabsDesign</p>
+                                <a href="" rel="tooltip" title="Appreciate"><span class="fa fa-heart-o fa-2x"></span></a>
+                                <a href="" rel="tooltip" title="View"><span class="fa fa-search fa-2x"></span></a>
+                            </div>
+                            <img src="http://24.media.tumblr.com/282fadab7d782edce9debf3872c00ef1/tumblr_n3tswomqPS1st5lhmo1_1280.jpg" class="img-responsive">
+                        </div>
+                        <div class="info">
+                            <p class="small" style="text-overflow: ellipsis">An Awesome Title</p>
+                            <p class="small coral text-right"><i class="fa fa-clock-o"></i> Posted Today | 10:42 A.M.</small>
+                        </div>
+                        <div class="stats turqbg">
+                            <span class="fa fa-heart-o"> <strong>47</strong></span>
+                            <span class="fa fa-eye pull-right"> <strong>137</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user-menu-content">
+                <h5 class="text-center">
+                    CREATE A CONTEST
+                </h5>
+                <center><i class="fa fa-cloud-upload fa-4x"></i></center>
+                <div class="share-links">
+                    <center><button type="button" class="btn btn-lg btn-labeled btn-success" href="#" style="margin-bottom: 15px;">
+                            <a style="color: black" href="/contest/new"><span class="btn-label"><i class="fa fa-bell-o"></i></span>Start Here
+                    </button></center></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+<h4 style="text-align: center; padding: 2em 0em 1em 0em;">What is coming?</h4>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
+
+    <div id="first-slider">
+        <div id="carousel-example-generic" class="carousel slide carousel-fade">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <!-- Item 1 -->
+                <div class="item active slide1">
+                    <div class="row"><div class="container">
+                        <div class="col-md-3 text-right">
+                            <img style="max-width: 200px;"  data-animation="animated zoomInLeft" src="http://s20.postimg.org/pfmmo6qj1/window_domain.png">
+                        </div>
+                        <div class="col-md-9 text-left">
+                            <h3 data-animation="animated bounceInDown">Add images, or even your logo!</h3>
+                            <h4 data-animation="animated bounceInUp">Easily use stunning effects</h4>
+                         </div>
+                    </div></div>
+                 </div>
+                <!-- Item 2 -->
+                <div class="item slide2">
+                    <div class="row"><div class="container">
+                        <div class="col-md-7 text-left">
+                            <h3 data-animation="animated bounceInDown"> 50 animation options A beautiful</h3>
+                            <h4 data-animation="animated bounceInUp">Create beautiful slideshows </h4>
+                         </div>
+                        <div class="col-md-5 text-right">
+                            <img style="max-width: 200px;"  data-animation="animated zoomInLeft" src="http://s20.postimg.org/sp11uneml/rack_server_unlock.png">
+                        </div>
+                    </div></div>
+                </div>
+                <!-- Item 3 -->
+                <div class="item slide3">
+                    <div class="row"><div class="container">
+                        <div class="col-md-7 text-left">
+                            <h3 data-animation="animated bounceInDown">Simple Bootstrap Carousel</h3>
+                            <h4 data-animation="animated bounceInUp">Bootstrap Image Carousel Slider with Animate.css</h4>
+                         </div>
+                        <div class="col-md-5 text-right">
+                            <img style="max-width: 200px;"  data-animation="animated zoomInLeft" src="http://s20.postimg.org/eq8xvxeq5/globe_network.png">
+                        </div>
+                    </div></div>
+                </div>
+                <!-- Item 4 -->
+                <div class="item slide4">
+                    <div class="row"><div class="container">
+                        <div class="col-md-7 text-left">
+                            <h3 data-animation="animated bounceInDown">We are creative</h3>
+                            <h4 data-animation="animated bounceInUp">Get start your next awesome project</h4>
+                         </div>
+                        <div class="col-md-5 text-right">
+                            <img style="max-width: 200px;"  data-animation="animated zoomInLeft" src="http://s20.postimg.org/9vf8xngel/internet_speed.png">
+                        </div>
+                    </div></div>
+                </div>
+                <!-- End Item 4 -->
+
+            </div>
+            <!-- End Wrapper for slides-->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <i class="fa fa-angle-left"></i><span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <i class="fa fa-angle-right"></i><span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>

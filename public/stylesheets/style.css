@@ -1,0 +1,341 @@
+  /* ------------ ------------ BOOSTRAP MODIFICATIONS ------------ ------------ */
+
+  .col-md-4 {
+      padding-bottom: 2em;
+  }
+
+  /* ------------ ------------ END BOOSTRAP MODIFICATIONS ------------ ------------ */
+
+  #featuredTitle {
+    padding-top: 1em;
+  }
+  /* ------------ ------------ GENERAL  MODIFICATIONS ------------ ------------ */
+
+  @import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
+  body{
+      font-family: 'Roboto', sans-serif;
+  }
+
+  body {
+     padding: 0px 3.5rem;
+     margin: 0px;
+  }
+  .padtop3 {
+    padding-top: 3em;
+  }
+  .paddingBottom4em {
+    padding-bottom: 4em;
+  }
+  .container-full {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+
+
+  h4 {
+      font-weight: bolder;
+      font-family: 'Quattrocento', serif;
+      letter-spacing: 3px;
+      font-size: 34px;
+  }
+
+  h5 {
+      font-weight: bolder;
+      font-family: 'Quattrocento', serif;
+      letter-spacing: 3px;
+      font-size: 20px;
+      color: black
+  }
+
+  h6 {
+      font-weight: bolder;
+      font-family: 'Quattrocento', serif;
+      letter-spacing: 3px;
+      font-size: 18px;
+      color: black
+  }
+
+  p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 22px;
+  }
+
+
+
+  /* --------------------- -------------------NAVIGATION MENU ----------------------- ------------------*/
+  .navbar {
+    background-color: transparent;
+    height: 100px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+  .l-header {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+  }
+
+  #menu {
+      float: right;
+      margin: auto;
+      padding: 3%;
+      float: right;
+      overflow: hidden;
+      position: relative;
+  }
+  #menu ul {
+      padding: 0px;
+      position: relative;
+      left: 50%;
+      margin: 0px;
+  }
+
+  #menu ul li {
+      list-style: none;
+      padding: 0;
+      right: 50%;
+      display: inline-block;
+      vertical-align: top;
+      font-weight: 400;
+      margin: 0;
+  }
+  #menu ul li a {
+      display: block;
+      margin: 0 0 0 1px;
+      padding: 3px 10px;
+      color: #black;
+      font-weight: bold;
+      text-decoration: none;
+      line-height: 1.3em;
+  }
+  #menu ul li a:hover {
+      color: lime;
+  }
+  #menu ul li a.active,
+  #menu ul li a.active:hover {
+     color:#fff;
+     background:#000;
+     font-weight:bold;
+  }
+
+
+  /* ------------ ------------ END GENERAL  MODIFICATIONS ------------ ------------ */
+
+
+  /* --------------------- --- END HEADER BAR ----------------------- -------------*/
+
+
+    /* ------------ ------------   LOGIN PAGE ------------ ------------ */
+
+    .room {
+        padding: 12%;
+        text-align: center;
+    }
+    .room > div {
+      padding: 2em;
+  }
+  #facebook {
+      background: #3b5998;
+      border-color: #3b5298;
+      width: 40%;
+      font-size: 20px;
+      height: 2.4em;
+      border-radius: 10px;
+  }
+  #facebook a {
+      color: white;
+      font-weight: bold;
+      text-align: center;
+  }
+  #google {
+      background: #db4437;
+      border-color: #db4137;
+      width: 16%;
+      height: 3em;
+      border-radius: 10px;
+  }
+  #google a {
+      color: white;
+      font-weight: bold;
+      text-align: center;
+  }
+  .login {
+    margin: auto;
+  }
+
+
+  /* ------------ ------------   END LOGIN PAGE ------------ ------------ */
+
+
+  /* ------------ ------------ HOME PAGE ------------ ------------ */
+
+  .gridOrder {
+      height: 400px;
+      margin: 20px auto 40px auto;
+  }
+
+  .contestGrid {
+      height: 230px;
+  }
+  .shadow {
+      text-align: center;
+      min-height: 10%;
+      background-color: #000000;
+      background-size: contain;
+      opacity: 0.65;
+      position: absolute;
+  }
+
+  .mainHeader {
+      text-align: center;
+      min-height: 10%;
+      background-image: url('/images/head');
+      background-size: contain;
+      height: 40vh;
+      filter: grayscale(60%);
+  }
+
+  .mainHeader h1 {
+      padding: 0.5em;
+      padding-top: 1em;
+  }
+
+  .mainHeader > p {
+      font-weight: bolder;
+      font-family: 'Quattrocento', serif;
+      font-size: 32px;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 2px black, 0 0 1em #9C27B0, 0 0 0.2em #7d3489;
+      -webkit-text-fill-color: white;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
+  }
+
+  .topRoom {
+      padding: 2em;
+  }
+
+
+
+  .well {
+      margin-top: 2em;
+  }
+
+
+
+  #featuredImg {
+      width: 100%;
+      max-height: 480px;
+  }
+
+  #featureBc {
+      width: 95%;
+      background-color: rgba(0, 0, 0, 0.28);
+      height: 4em;
+      position: absolute;
+      background: red;
+      background: -webkit-linear-gradient(left, red , rgba(255, 255, 0, 0));
+      background: -o-linear-gradient(right, red, yellow);
+      background: -moz-linear-gradient(right, red, yellow);
+      background: linear-gradient(to right, red , rgba(0, 0, 0, 0));
+  }
+
+  .featuredText {
+      padding-top: 6px;
+  }
+
+  #contestsGrid > .gridOrder {
+      min-height: 500px;
+  }
+
+  .contestGrid {
+    width: 300px;
+  }
+
+  #featuredLine {
+      width: 30%;
+      margin-right: 0em;
+      height: 45px;
+  }
+
+  #featuredVotes {
+      width: 77px;
+      height: 77px;
+      border-radius: 50%;
+      color: #fff;
+      line-height: 67px;
+      text-align: center;
+      background: #000;
+      border: 6px dotted #800020;
+      top: 19.5em;
+      right: 2.5em;
+      font-weight: bold;
+      display: inline-block;
+          float: right;
+  }
+
+  #featuredTittle {
+      padding: 15px 0px;
+  }
+
+  .middle {
+      height: 46px;
+      -webkit-filter: grayscale(1);
+      filter: grayscale(1);
+      float: right;
+      margin: 1em;
+  }
+
+  .btn-caesar {
+      color: #fff;
+      background-color: #800020;
+      border-color: #92723a;
+      border: 4px;
+      font-weight: bold;
+      padding: 1em !important;
+      margin-top: 2em;
+      width: 70%;
+      font-size: 24px;
+  }
+
+  .btn-caesar:hover {
+      color: white;
+      text-shadow: -1px 4px 10px black;
+      background-color: #d31d1d;
+  }
+
+  .btn-caesar:hover {
+      color: white;
+      text-shadow: -1px 4px 10px black;
+  }
+
+
+  /* ------------ ------------  END  HOME PAGE ------------ ------------ */
+
+  /* ------------ ------------  FOOTER  ------------ ------------ */
+  footer {
+    margin-top: 10em;
+  }
+
+
+   /* ------------ ------------  FOOTER  END ------------ ------------ */
+
+
+  /* ------------ ------------ MEDIA QUERY  ------------ ------------ */
+
+  @media screen and (min-width: 1025px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+  }
+
+  @media (min-width: 768px) {
+  .navigation {
+      float: right;
+      margin: 0;
+  }
+  }

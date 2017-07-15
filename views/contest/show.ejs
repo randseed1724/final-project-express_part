@@ -1,0 +1,34 @@
+
+<div style="padding: 8em;" class="row" />
+
+<h4>Contest Details</h4>
+
+
+<h5><%= title %></h5>
+<img src="<%=contest.contestImage%>" width="300px"/>
+<ul>
+<li> Category: <%= contest.category %></li>
+<li> Type of Award:<%= contest.typeAward %> </li>
+<li> What should give this contests a thump up?: <%=contest.caesarThump%></li>
+<li> Award Description:<%= contest.describeAward %> </li>
+<li> Amount of possible winners: <%= contest.totalWinners %> </li>
+<li> How the award will be provided: <%= contest.providingAward %> </li>
+
+<li> Information about you: <%= contest.aboutYou %> </li>
+
+
+</ul>
+<hr/>
+
+      <a href = "/contest">
+        Back to your contests page
+      </a>
+
+      <form action = "/<%= contest._id%>" method = "POST" >
+         <div>
+           <label for = "title"> Votes </label>
+           <p>Votes: <%=contest.votes%></p>
+         </div>
+         <button  type="button" id="addVote"> Vote </button>
+      </form>
+</div>

@@ -1,0 +1,194 @@
+<h1><%= title %></h1>
+
+<form action = "/contest/<%= contest._id %>" method = "POST" >
+  <!--container #1 -->
+  <div class="container">
+      <div class="stepwizard">
+          <div class="stepwizard-row setup-panel">
+              <div class="stepwizard-step">
+                  <a href="#step-1" type="button" class="btn btn-primary btn-circle">
+                  <i class="glyphicon glyphicon-user"></i></a>
+              </div>
+              <div class="stepwizard-step">
+                  <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">
+                  <i class="glyphicon glyphicon-heart"></i></a>
+              </div>
+              <div class="stepwizard-step">
+                  <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">
+                  <i class="glyphicon glyphicon-plus"></i></a>
+              </div>
+              <div class="stepwizard-step">
+                  <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">
+                  <i class="glyphicon glyphicon-ok"></i></a>
+              </div>
+          </div>
+      </div>
+
+      <form role="form" id="form1" action = "/contest/<%= contest._id %>" method="post" enctype="multipart/form-data">
+        <!-- STEP 4-->
+          <div class="row setup-content" id="step-3">
+              <div class="col-xs-12 paddingBottom4em">
+                  <div class="col-md-12 ">
+                    <div class="container">
+                      <h3>Award</h3>
+                        <br/>
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label class="control-label">Describe your contest award</label>
+                                  <input  maxlength="100" type="text" name="describeAward" required="required" class="form-control" placeholder="Provide information about the amount of money, recognation or kind of product the winner will get">
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="subject">
+                                       How many winners will your contest have?
+                                  </label>
+                                  <select id="subject" form="form1" name="manyWinners" class="form-control" required="required">
+                                            <option value="one">1</option>
+                                            <option value="two">2</option>
+                                            <option value="three">3</option>
+                                            <option value="four">4</option>
+                                            <option value="five">5</option>
+                                  </select>
+                                </div>
+                           </div>
+
+                           <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="control-label">How will you be providing the award?</label>
+                                    <input maxlength="100" type="textarea" name="providingAward" required="required" class="form-control" placeholder="Let contest participants know about you">
+                                </div>
+                           </div>
+                      </div>
+                      <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+                  </div>
+                </div>
+              </div>
+
+
+            <div class="row setup-content" id="step-2">
+                <div class="col-xs-12 paddingBottom4em">
+                    <div class="col-md-12">
+                      <div class="container">
+                        <h3>Contest Information</h3>
+                            <br/>
+                              <div class="col-md-6">
+                                  <div class="form-group">
+                                      <label class="control-label">Contest Name</label>
+                                      <input  maxlength="100" type="text" required="required" class="form-control" name="contestName" placeholder="Give your contest a name"  />
+                                  </div>
+                              </div>
+
+                              <div class="col-md-6">
+                                  <div class="form-group">
+                                      <label for="subject">
+                                        Type of Award
+                                      </label>
+
+                                          <select id="subject" name="typeAward" required="required" class="form-control" required="required">
+                                                <option value="Cash">Money</option>
+                                                <option value="Digital">Digital Product</option>
+                                                <option value="Physical">Physical Product</option>
+                                                <option value="Service">Free Service</option>
+                                                <option value="Recognition">Recognition</option>
+                                          </select>
+                                      </div>
+                                  </div>
+
+                              <div class="col-md-6">
+                                  <div class="form-group">
+                                            <label class="control-label">How to get Ceasar's Thump up?</label>
+                                            <input  maxlength="100" type="text" required="required" class="form-control" name="contestThump" placeholder="Give your contest a name"  />
+                                  </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                      <label class="control-label">Tell us about you</label>
+                                      <input maxlength="100" type="text" name="aboutYou" required="required" class="form-control" placeholder="Let contest participants know about you">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                      <label class="control-label">Contest description</label>
+                                      <input maxlength="100" type="text" name="contestDescription" required="required" class="form-control" placeholder="Describe your contest here">
+                                </div>
+                          </div>
+                          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+
+    <div class="row setup-content" id="step-1">
+      <div class="col-xs-12 paddingBottom4em">
+          <div class="col-md-12">
+              <div class="container">
+                  <h3>Choose a Category</h3>
+                  <br/>
+
+                    <div class="col-md-12">
+                      <ul class="listrap">
+
+                      <li  class="col-md-2">
+                        <input  type="checkbox"   name="photography" value="photography" checked>Photography<br>
+                        <img class="checkInput" src="/images/photo-camera.svg" height="60px" width="60px"  />
+                      </li>
+
+                      <li  class="col-md-2">
+                        <input  type="checkbox"   name="video" value="video" > Video<br/>
+                        <img class="checkInput" src="/images/film.svg" height="60px" width="60px" />
+                      </li>
+
+                      <li  class="col-md-2">
+                         <input  type="checkbox"   name="music" value="music" > Music<br>
+                         <img class="checkInput" src="/images/headphones.svg" height="60px" width="60px" />
+                      </li>
+                      <li  class="col-md-2">
+                         <input  type="checkbox"   name="writing" value="writing" >Writing<br>
+                         <img class="checkInput" src="/images/pen.svg" height="60px" width="60px"  />
+                      </li>
+                      </ul>
+                   </div>
+  <hr/>
+
+
+                 <br/>
+                 <h3 class="padtop3">Upload an image that represents your contest</h3>
+               <br/>
+                      <div class="col-md-12">
+                          <input type="file" name="contestImage" required="required" >
+                      </div>
+                      <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+                  </div>
+                </div>
+                </div>
+              </div>
+              <!-- STEP 4-->
+          <div class="row setup-content" id="step-4">
+              <div class="col-xs-12 paddingBottom4em">
+                  <div class="col-md-12">
+                    <div class="container">
+                      <h3>Almost Done!</h3>
+                      <p>
+                        All you have to do is to click the submit button.<br/>
+                        You can go back and review/edit your project details if you want.
+                        <button class="btn btn-primary nextBtn btn-lg pull-right" type="submit" >Submit</button>
+  <!-- <input type="submit" value="Submit Comment" /> -->
+                      </p>
+                      <div class="form-group">
+                      </div>
+                      <!-- <input type="submit" value="Submit Comment" /> -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </form>
+    </div>
+
+
+
+
+    <a href = "/contest">
+      Back to list of Contets
+    </a>
