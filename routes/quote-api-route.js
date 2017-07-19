@@ -37,7 +37,7 @@ router.post('/api/quote', ensureLoggedInApiVersion, (req, res, next) => {
    });// close "exec()"" callback
 });
 
-router.get('/api/quotes', ensureLoggedInApiVersion, (req, res, next) => {
+router.get('/api/quotesapi', ensureLoggedInApiVersion, (req, res, next) => {
     ListModel
       .find({ owner: req.user._id })
       .populate('quote')

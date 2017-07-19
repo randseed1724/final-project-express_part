@@ -6,7 +6,6 @@ const UserModel  = require('../models/user-model.js');
 const router     = express.Router();
 
 
-//NIZAR CLASS
 router.post('/api/signup', (req, res, next) => {
     const theFullName =  req.body.signupFullName;
     const theEmail = req.body.signupEmail;
