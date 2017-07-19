@@ -35,21 +35,20 @@ router.post('/api/quote', ensureLoggedInApiVersion, (req, res, next) => {
         res.status(200).json(thisQuotes);
      });
    });// close "exec()"" callback
-});> {
-        if (err) {
-          res.status(500).json({message: 'Find list went wrong at final step - randseed1724'});
-          return;
-        }
-        res.status(200).json(.userCreator })
-   .populate("userCreator")
-   .exec((err, allTheList) => {
-     if (err) {
+});
+
+router.get('/api/quotes', ensureLoggedInApiVersion, (req, res, next) => {
+    ListModel
+      .find({ owner: req.user._id })
+      .populate('quote')
+      .exec((err, allTheLists) => {
+    if (err) {
        res.status(500).json({ message: "User was not found"});
        return;
      }
 
      res.stautes(200).json(allTheList);
-   });
-});
+   }); // close "exec()" callback
+}); // close get '/api/lists'
 
 module.exports = router;
