@@ -166,6 +166,7 @@ passport.use(new GoogleStrategy(
 module.exports = function (passport) {
 
 passport.use(new LocalStrategy((username, password, next) => {
+  console.log("USERNAME:" , username);
     User.findOne({ username }, (err, foundUser) => {
       if (err) {
         next(err);
@@ -193,6 +194,8 @@ passport.use(new LocalStrategy((username, password, next) => {
    passwordField: 'loginPassword'
  },
     (apiEmail, apiPassword, next) => {
+      console.log(apiEmail);
+      console.log(apiPassword);
       User.findOne(
         { email: apiEmail },
         (err, userFromDb) => {
@@ -208,31 +211,10 @@ passport.use(new LocalStrategy((username, password, next) => {
           next(null, false, { message: 'Invalid password' });
           return;
         }
-        next(null, foundUser);
+        next(null, userFromDb);
       });
     }));
 
-//before
-  // passport.use(new LocalStrategy((username, password, next) => {
-  //     User.findOne({ username }, (err, foundUser) => {
-  //       if (err) {
-  //         next(err);
-  //         return;
-  //       }
-  //
-  //       if (!foundUser) {
-  //         next(null, false, { message: 'Incorrect username' });
-  //         return;
-  //       }
-  //
-  //       if (!bcrypt.compareSync(password, foundUser.password)) {
-  //         next(null, false, { message: 'Incorrect password' });
-  //         return;
-  //       }
-  //
-  //       next(null, foundUser);
-  //     });
-  //   }));
 
 
   passport.serializeUser((loggedInUser, cb) => {
@@ -250,55 +232,3 @@ passport.use(new LocalStrategy((username, password, next) => {
     });
   });
 };
-
-// PASSPORT STRATEGY FOUND HERE
-
-// passport.use( new LocalStrategy(
-//   // 1st arg -> options to customize LocalStrategy
-//   {
-//       // <input name="loginUsername">
-//     usernameField: 'loginUsername',
-//       // <input name="loginPassword">
-//     passwordField: 'loginPassword'
-//   },
-//
-//   // 2nd arg -> callback for the logic that validates the login
-//   (loginUsername, loginPassword, next) => {
-//     User.findOne(
-//       { username: loginUsername },
-//
-//       (err, theUser) => {
-//         // Tell Passport if there was an error (nothing we can do)
-//         if (err) {
-//           next(err);
-//           return;
-//         }
-//
-//         // Tell Passport if there is no user with given username
-//         if (!theUser) {
-//             //       false in 2nd arg means "Log in failed!"
-//             //         |
-//           next(null, false, { message: 'Wrong username, buddy. 😓' });
-//           return;  //   |
-//         }          //   v
-//                    // message -> req.flash('error')
-//
-//         // Tell Passport if the passwords don't match
-//         if (!bcrypt.compareSync(loginPassword, theUser.encryptedPassword)) {
-//             //       false in 2nd arg means "Log in failed!"
-//             //         |
-//           next(null, false, { message: 'Wrong password, friend.' });
-//           return;  //   |
-//         }          //   v
-//                    // message -> req.flash('error')
-//
-//         // Give Passport the user's details (SUCCESS!)
-//         next(null, theUser, {
-//           // message -> req.flash('success')
-//           message: `Login for ${theUser.username} successful.`
-//         });
-//           // -> this user goes to passport.serializeUser()
-//       }
-//     );
-//   }
-// ) );

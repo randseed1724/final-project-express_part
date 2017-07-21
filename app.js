@@ -9,7 +9,6 @@ const dotenv            = require('dotenv');
 const config            = require('config');
 const flash             = require('connect-flash');
 const cors              = require('cors');
-const authRoutes        = require('./routes/auth-route');
 const session           = require('express-session');
 const passport          = require('passport');
 const mongoose          = require('mongoose');
@@ -83,6 +82,7 @@ app.use(cors({
   origin: ["http://localhost:4200"]
 }));
 
+
 //ROUTES  <<<< -------------------------------------------------
 //^^^^^^  -------------------------------------------------
 const index = require('./routes/index-route');
@@ -90,6 +90,7 @@ app.use('/', index);
 
 const userIn = require('./routes/user-route');
 app.use('/', userIn);
+
 
 const myAuthRoutes = require('./routes/auth-route');
 app.use('/', myAuthRoutes);
