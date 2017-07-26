@@ -4,7 +4,7 @@ const Schema   = mongoose.Schema;
 
 const quoteSchema = new Schema({
         author:             { type: String, default: "anonymous"},
-        userCreator:               { type: Schema.Types.ObjectId, ref:'User'},
+        userCreator:        { type: Schema.Types.ObjectId, ref:'User'},
         quote:              { type: String, default: "Silence is Gold"},
         quote_length:       { type: Number, default: '0',  maxlength: 100},
         sku:      { type: String },
@@ -13,8 +13,9 @@ const quoteSchema = new Schema({
             'writing', 'general' , 'life' , 'love', 'creativity', 'hapiness',
             'success' ],  default: 'general'
         },
-        votes:    { type: Number, default: '0' },
-        total_views: { type: Number, default: '0' },
+        votes:              { type: Number, default: '0' },
+        total_views:        { type: Number, default: '0' },
+        featured:           { type: Boolean, default: false }
     },
     {
     timestamps: true

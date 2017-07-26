@@ -2,9 +2,9 @@ const express = require('express');
 const router  = express.Router();
 const QuotesModel  = require('../models/quotes-model');
 
-const ensureLoggedInApiVersion = require ('../lib/ensure-logged-in-api-version');
+// const ensureLoggedInApiVersion = require ('../lib/ensure-logged-in-api-version');
 
-router.post('/api/quote', ensureLoggedInApiVersion, (req, res, next) => {
+router.post('/api/quote', /* ensureLoggedInApiVersion, */ (req, res, next) => {
    QuotesModel.
    findOne({ owner: req.user_id })
    .sort({ position: -1}) //-1 = opposite order 321 -- 1 = Normal order 123
@@ -27,17 +27,17 @@ router.post('/api/quote', ensureLoggedInApiVersion, (req, res, next) => {
         author: req.body.author,
      });
 
-      thisQuotes.save((err) => {
+      theQuotes.save((err) => {
         if (err) {
           res.status(500).json({message: 'Find list went wrong at final step - randseed1724'});
           return;
         }
-        res.status(200).json(thisQuotes);
+        res.status(200).json(theQuotes);
      });
    });// close "exec()"" callback
 });
 
-router.get('/api/quotesapi', ensureLoggedInApiVersion, (req, res, next) => {
+router.get('/api/quotesapi', /* ensureLoggedInApiVersion, */ (req, res, next) => {
     ListModel
       .find({ owner: req.user._id })
       .populate('quote')
