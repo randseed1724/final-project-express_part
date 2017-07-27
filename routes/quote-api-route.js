@@ -1,13 +1,44 @@
 const express = require('express');
-const router  = express.Router();
 const QuotesModel  = require('../models/quotes-model');
 
-// const ensureLoggedInApiVersion = require ('../lib/ensure-logged-in-api-version');
+const router  = express.Router();
 
-router.post('/api/quote', /* ensureLoggedInApiVersion, */ (req, res, next) => {
+const ensureLoggedInApiVersion = require ('../lib/ensure-logged-in-api-version');
+
+
+
+router.get('/api/user',  /*  ensureLoggedInApiVersion, */  (req, res, next) => {
+    ListModel
+      .find({ owner: req.user._id })
+      .populate('quote')
+      .exec((err, allTheLists) => {
+    if (err) {
+       res.status(500).json({ message: "User was not found"});
+       return;
+     }
+
+     res.stautes(200).json(allTheList);
+   }); // close "exec()" callback
+}); // close get '/api/lists'
+
+router.get('/api/quotes',  /*  ensureLoggedInApiVersion, */  (req, res, next) => {
+    ListModel
+      .find({ owner: req.user._id })
+      .populate('quote')
+      .exec((err, allTheLists) => {
+    if (err) {
+       res.status(500).json({ message: "User was not found"});
+       return;
+     }
+
+     res.stautes(200).json(allTheList);
+   }); // close "exec()" callback
+}); // close get '/api/lists'
+
+router.post('/api/quote', /* ensureLoggedInApiVersion,*/  (req, res, next) => {
    QuotesModel.
    findOne({ owner: req.user_id })
-   .sort({ position: -1}) //-1 = opposite order 321 -- 1 = Normal order 123
+   .sort({ position: 1}) //-1 = opposite order 321 -- 1 = Normal order 123
    .exec((err, lastQuotes) => {
      if (err) {
        res.status(500).json({message: 'Find list went wrong - randseed1724'});
@@ -37,18 +68,6 @@ router.post('/api/quote', /* ensureLoggedInApiVersion, */ (req, res, next) => {
    });// close "exec()"" callback
 });
 
-router.get('/api/quotesapi', /* ensureLoggedInApiVersion, */ (req, res, next) => {
-    ListModel
-      .find({ owner: req.user._id })
-      .populate('quote')
-      .exec((err, allTheLists) => {
-    if (err) {
-       res.status(500).json({ message: "User was not found"});
-       return;
-     }
 
-     res.stautes(200).json(allTheList);
-   }); // close "exec()" callback
-}); // close get '/api/lists'
 
 module.exports = router;
