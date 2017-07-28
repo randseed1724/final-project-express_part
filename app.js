@@ -104,6 +104,8 @@ app.use('/', quotesSeeds);
 const quotesAPIroute = require('./routes/quote-api-route');
 app.use('/', quotesAPIroute);
 
+
+
 // ----------------------------------------------------------
 //ACTIVAR AL FINAL
 // app.use((req, res, next) => {

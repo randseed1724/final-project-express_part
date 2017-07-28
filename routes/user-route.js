@@ -6,11 +6,12 @@ const routerUser = express.Router();
 
 // routerUser.get('/user/:id', (req, res, next) => {
 
-routerUser.get('/profile',
+routerUser.get('/api/profile',
 //     redirects to '/login' if you are NOT logged in
 //                      |
 ensure.ensureLoggedIn('/login'),
 (req, res, next) => {
+
 
 res.render('user/profile.ejs', {
   successMessage: req.flash('success')
