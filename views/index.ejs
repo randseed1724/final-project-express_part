@@ -1,0 +1,66 @@
+<!-- HEADER -->
+
+<div class="row">
+  <div class="col-md-12 mainHeader">
+    			<h1>Contests, Thumbs and Awards</h1>
+            	<h2 class="subtitle">Create your contest and vote for your favorite contestant</h2>
+    </div>
+
+
+    <div class="col-md-6 topRoom">
+      <div id="featureBc">
+        <h3 id="featured">Featured Contest</h3>
+
+
+      </div>
+        <img id="featuredImg" class="img-responsive img-rounded" src="/images/guitar-756326_1920.jpg" alt="">
+        <div id="votePosition">
+          <div id="featuredVotes">
+            <p>462</p>
+          </div>
+          <img class="middle" src="/images/middle.png"/>
+        </div>
+    </div>
+    <!-- /.col-md-8 -->
+    <div class="col-md-6 featuredText">
+       <% if (typeof contest !== "undefined") { %>
+
+      <% }  else { %>
+        <h4 id="featuredTittle"><%=contest[1].name%> Contest</h4>
+      <% } %>
+
+
+          <!-- <% if (typeof message !== "undefined") { %>
+          <div class="success">  <%= success %> </div>
+          <% } %> -->
+
+        <h4 id="featuredTitle">Acustic Guitar Solo Competition</h4>
+        <p>This is a great platform for businesses and individuals to create and manage contests and awards winner. Feel free to use this platform for any project you want!</p>
+        <a class="btn btn-caesar btn-lg" href="#">Participate on this Contests</a>
+    </div>
+</div>
+<div class="row">
+    <div class="container-fluid">
+        <div class="well text-center">
+            <h4>Select a contest and vote for your favorite contestant!</h4>
+        </div>
+    </div>
+</div>
+
+<div id="contestsGrid">
+      <% contest.forEach( (theContest) => { %>
+        <div class="col-md-4 gridOrder">
+          <img src="<%= theContest.contestImage %>" class="contestGrid" />
+          <h4><%=theContest.name%></h4>
+          <p style="padding-left: 0px;" class="col-md-6">Contestants: <%= theContest.contestants%></p>
+          <p style="padding-left: 0px;" class="col-md-6">Votes: <%= theContest.votes%></p>
+            <p>Category: <%= theContest.category %></p>
+            <p><%=theContest.description%></p>
+            <a style="float: left;" class="btn btn-danger btn-lg" href="#">More Info</a>
+        </div>
+      <% }); %>
+</div>
+
+
+
+<!-- FOOTER -->
