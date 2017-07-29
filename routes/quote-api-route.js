@@ -32,10 +32,10 @@ router.get('/api/quotes',  /*  ensureLoggedInApiVersion, */  (req, res, next) =>
    }); // close "exec()" callback
 }); // close get '/api/lists'
 
+
 router.post('/api/quote', /* ensureLoggedInApiVersion,*/  (req, res, next) => {
-  console.log("OPPPPPPPPPPPPP434",req.user_id);
-   QuotesModel
-   .findOne({ user: req.user._id })
+   QuotesModel.
+   findOne({ owner: req.user_id })
    .sort({ position: 1}) //-1 = opposite order 321 -- 1 = Normal order 123
    .exec((err, lastQuotes) => {
      if (err) {
@@ -43,7 +43,7 @@ router.post('/api/quote', /* ensureLoggedInApiVersion,*/  (req, res, next) => {
        return;
      }
 //default to 1
-     let newPOsition = 1;
+     let newPOsition = 0;
 
      if (lastQuotes) {
        // butt use the last list's postion (+1) if er have one
@@ -51,7 +51,6 @@ router.post('/api/quote', /* ensureLoggedInApiVersion,*/  (req, res, next) => {
      }
 
      const theQuotes = new QuotesModel({
-       user: req.user._id,
        quote: req.body.quote,
        quote_length: req.body.quote_length,
         author: req.body.author,
@@ -66,6 +65,7 @@ router.post('/api/quote', /* ensureLoggedInApiVersion,*/  (req, res, next) => {
      });
    });// close "exec()"" callback
 });
+
 
 
 
