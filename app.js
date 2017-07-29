@@ -86,7 +86,7 @@ app.use(cors({
 //ROUTES  <<<< -------------------------------------------------
 //^^^^^^  -------------------------------------------------
 const index = require('./routes/index-route');
-app.use('/', index);
+app.use('/api/', index);
 
 const userIn = require('./routes/user-route');
 app.use('/', userIn);
@@ -108,9 +108,9 @@ app.use('/', quotesAPIroute);
 
 // ----------------------------------------------------------
 //ACTIVAR AL FINAL
-// app.use((req, res, next) => {
-//   res.sendfile(__dirname + '/public/index.html');
-// });
+app.use((req, res, next) => {
+  res.sendfile(__dirname + '/public/index.html');
+});
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

@@ -14,14 +14,14 @@ const path = require('path');
 
 /* GET contest page. */
 
-router.get('/api/quotes', function(req, res, next) {
-  quotesSeeds.find({}, (err, quoteArray) => {
-    if (err) { return next(err); }
-    res.json(quoteArray);
-
-
-  });
-});
+// router.get('/api/quotes', function(req, res, next) {
+//   quotesSeeds.find({}, (err, quoteArray) => {
+//     if (err) { return next(err); }
+//     res.json(quoteArray);
+//
+//
+//   });
+// });
 
 
 module.exports = router;
